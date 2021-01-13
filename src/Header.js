@@ -11,7 +11,7 @@ function Header() {
     return (
         <div className= "header">
             <Link to="/">
-                <img className="header__logo" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+                <img className="header__logo" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon logo"/>
             </Link>
 
             <div className="header__search">
@@ -21,21 +21,25 @@ function Header() {
             </div>
             
             <div className="header__nav">
-                {/* section 1*/ }
-                <div className="header__option">
-                    <span className="header__optionLineOne"> Hello Guest!</span>
-                    <span className="header__optionLineTwo"> Sign In</span>
-                </div >
-                {/* section 2*/ }
-                <div className="header__option">
-                    <span className="header__optionLineOne"> Returns</span>
-                    <span className="header__optionLineTwo"> & Orders</span>
-                </div>
-                {/* section 3*/ }
-                <div className="header__option">
-                    <span className="header__optionLineOne">Your</span>
-                    <span className="header__optionLineTwo">Prime</span>
-                </div>
+                <Link to='/login'>
+                    {/* section 1*/ }
+                    <div className="header__option">
+                        <span className="header__optionLineOne"> Hello Guest!</span>
+                        <span className="header__optionLineTwo"> Sign In</span>
+                    </div >
+                </Link>
+    
+                    {/* section 2*/ }
+                    <div className="header__option">
+                        <span className="header__optionLineOne"> Returns</span>
+                        <span className="header__optionLineTwo"> & Orders</span>
+                    </div>
+                    {/* section 3*/ }
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Your</span>
+                        <span className="header__optionLineTwo">Prime</span>
+                    </div>
+                
                 {/*Basket */}
                 <Link to='/checkout'>
                 <div className="header__optionBasket">
@@ -43,7 +47,6 @@ function Header() {
                     <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
                 </div>
                 </Link>
-
 
             </div>
         </div>

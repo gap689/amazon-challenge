@@ -3,7 +3,7 @@ import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 
 
-function checkoutProduct({id, image, title, price, rating}) {
+function CheckoutProduct({id, image, title, price, rating}) {
     //to pull information or change information with the dispatch
     const[{ basket }, dispatch] = useStateValue();
 
@@ -17,7 +17,7 @@ function checkoutProduct({id, image, title, price, rating}) {
 
     return (
         <div className="checkoutProduct">
-            <img className="checkoutProduct__image" src={image}/>
+            <img className="checkoutProduct__image" src={image} alt="banner"/>
 
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
@@ -40,4 +40,4 @@ function checkoutProduct({id, image, title, price, rating}) {
     )
 }
 
-export default checkoutProduct
+export default CheckoutProduct
