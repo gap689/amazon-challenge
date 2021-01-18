@@ -1,5 +1,6 @@
 export const initialState = {
     basket: [],
+    user: null
   };
   
   // Selector,  (used in production environments)
@@ -22,13 +23,20 @@ export const initialState = {
                 if (index >= 0) {
                     newBasket.splice(index, 1); // pass the index and then splice it by one,
                 } else {
-                    console.warn(`can't remove product: (id: ${action.id}) as its not in the basket`)
+                    console.warn(
+                        `can't remove product: (id: ${action.id}) as its not in the basket`)
                 }
 
                 return{
                     ...state,
                     basket: newBasket
 
+                }
+
+            case "SET_USER":
+                return {
+                    ...state,
+                    user: action.user,
                 }
       default:
         return state;
